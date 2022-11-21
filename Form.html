@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Test</title>
+        <meta http-equiv="refresh" content="30">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="Form CSS.css">
+
+    </head>
+    <body>
+        <header>
+            <h1>This is my form Test</h1>
+        </header>
+        <div style="text-align:center">
+            <button onclick="playPause()">Play/Pause</button> 
+            <button onclick="makeBig()">Big</button>
+            <button onclick="makeSmall()">Small</button>
+            <button onclick="makeNormal()">Normal</button>
+            <br><br>
+
+            <video width="320" height="240"id="video1" autoplay muted controls>
+                <source src="download.mp4" type="video/mp4">
+                <source src="download.mp4" type="video/ogg">
+          Your browser does not support the video tag.
+          </video>
+          <audio controls autoplay muted>
+            <source src="Would_ya_jeep_jeepsoftiktok_jeeplife_fyp_foryoupage_jeeper_cooljeep_sickjeep_eone-TikTok-7003335377561963782-bytevc1_720p_3083532-2-5.mp3" type="audio/mp3">
+            <source src="Would_ya_jeep_jeepsoftiktok_jeeplife_fyp_foryoupage_jeeper_cooljeep_sickjeep_eone-TikTok-7003335377561963782-bytevc1_720p_3083532-2-5.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+          </audio>
+
+          <iframe width="420" height="315"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+
+          <script>
+            var myVideo = document.getElementById("video1"); 
+
+            function playPause() { 
+                if (myVideo.paused) 
+                    myVideo.play(); 
+                else 
+                    myVideo.pause(); 
+            } 
+
+            function makeBig() { 
+                myVideo.width = 560; 
+            } 
+
+            function makeSmall() { 
+                 myVideo.width = 320; 
+            } 
+
+            function makeNormal() { 
+                myVideo.width = 420; 
+            }    
+
+          </script>
+
+
+
+
+        </div>
+        <form action="/action_page.php">
+            <fieldset>
+              <legend>test quiz</legend>
+              <label for="fname">First name:</label><br>
+              <input type="text" id="fname" name="fname" value="John"><br>
+              <label for="lname">Last name:</label><br>
+              <input type="text" id="lname" name="lname" value="Doe"><br><br>
+              <input type="submit" value="Submit">
+            </fieldset>
+            <fieldset>
+                <legend>datalist test</legend>
+                <input list="cars">
+                    <datalist id="cars">
+                        <option value="ford">Ford</option>
+                        <option value="BMW">BMW</option>
+                        <option value="GMC">GMC</option>
+                    </datalist>
+                </input>
+
+            </fieldset>
+          </form>
+          <form>
+            <fieldset>
+                <legend>Dropdown</legend>
+                <select id="cars" name="cars" multiple>
+                    <option value="BMW">BMW</option>
+                    <option value="Ford">Ford</option>
+                    <option value="GMC">GMC</option>
+                </select>
+                <br>
+
+
+                <button type="button" onclick="alert('Hello World!')">Hello</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>Username and Password</legend>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" placeholder="username" required autofocus><br>
+                <label for="pwd">Password:</label><br>
+                <input type="password" id="pwd" name="pwd" placeholder="password" required><br>
+                <input type="checkbox" id="vech1" name="vech1" value="BMW">
+                <label for="vech1">I have a BMW</label><br>
+                <input type="checkbox" id="vech2" name="vech2" value="Ford">
+                <label for="vech2">I have a Ford</label><br>
+                <label for="favcolor">My favorite color is:</label>
+                <input type="color" id="favcolor" name="favcolor"><br>
+                <label for="birthday">Your birthday is:</label>
+                <input type="datetime-local" id="birthday" name="birthday"  >
+                <label for="myfile">Enter a file</label><br>
+                <input type="file" id="myfile" name="myfile" multiple><br>
+                <label for="mynum">Enter a number between 1 and 100:</label>
+                <input type="range" id="mynum" name="mynum" min="1" max="200" step="4"><br>
+                <lable for="tele">Enter your telephone number</lable>
+                <input type="tel" id="tele" name="tele" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="756-31-789"><br>
+                <label for="pin">Pin:</label>
+                <input type="text" id="pin" name="pin" size="4" maxlength="4"><br>
+                <input list="cars">
+                <datalist id="cars">
+                    <option value="BMW">
+                    <option value="Ford">
+                    <option value="GMC">
+                </datalist>
+
+                
+                <input type="reset">
+
+            </fieldset>
+          </form>
+          
+          
+        
+
+
+    </body>
+
+</html>
